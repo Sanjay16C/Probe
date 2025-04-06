@@ -10,7 +10,6 @@
 - **Web Data Extraction** – Scrapes relevant content from the web and provides citations.
 - **Contextual Query Understanding** – Improves result accuracy by understanding intent.
 - **Responsive Chat UI** – Interactive, clean, and mobile-friendly design.
-- **Light/Dark Mode Toggle** – Seamless switch between light and dark themes.
 
 ---
 
@@ -24,26 +23,6 @@
 | LLM Access   | OpenAI API / Custom LLM   |
 | Styling      | CSS / Custom Components   |
 | Deployment   | Render / Vercel           |
-
----
-
-## 🗂️ Project Structure
-
-```
-probe/
-├── backend/             # FastAPI app
-│   ├── app/
-│   │   ├── main.py
-│   │   └── routes/
-│   └── requirements.txt
-├── frontend/            # React frontend
-│   ├── src/
-│   │   ├── components/
-│   │   └── App.js
-│   └── package.json
-├── prompts/             # Prompt templates
-└── README.md
-```
 
 ---
 
@@ -84,16 +63,14 @@ npm start
 
 - Ensure the backend is running and accessible to the frontend.
 - If using an external LLM API (e.g., OpenAI), store the API key securely (e.g., in environment variables).
-- Modify prompt handling logic inside `prompts/` or API routes to adjust LLM behavior.
 
 ---
 
 ## 📌 Future Enhancements
 
-- [ ] Add authentication system  
-- [ ] Save user query history  
-- [ ] Implement advanced filtering for search results  
-- [ ] Add feedback & rating system for answer quality  
+- [ ] Add authentication system   
+- [ ] Implement advanced filtering for search results
+- [ ] Light/Dark Mode Toggle** – Seamless switch between light and dark themes.  
 
 ---
 
