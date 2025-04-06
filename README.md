@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+# 🔍 Probe – Perplexity-Inspired Smart Search Engine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Probe** is an intelligent search engine that leverages LLMs (Large Language Models), contextual understanding, and real-time web scraping to provide accurate, concise, and citation-supported answers. Designed with a clean, chat-like interface, Probe aims to enhance search experiences through AI-powered query interpretation and response generation.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **LLM-Powered Answers** – Natural language responses using open-source or integrated LLMs.
+- **Web Data Extraction** – Scrapes relevant content from the web and provides citations.
+- **Contextual Query Understanding** – Improves result accuracy by understanding intent.
+- **Responsive Chat UI** – Interactive, clean, and mobile-friendly design.
+- **Light/Dark Mode Toggle** – Seamless switch between light and dark themes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧰 Tech Stack
 
-### `npm test`
+| Layer        | Technology                |
+|--------------|---------------------------|
+| Frontend     | React.js                  |
+| Backend      | FastAPI (Python)          |
+| Scraping     | BeautifulSoup / Requests  |
+| LLM Access   | OpenAI API / Custom LLM   |
+| Styling      | CSS / Custom Components   |
+| Deployment   | Render / Vercel           |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🗂️ Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+probe/
+├── backend/             # FastAPI app
+│   ├── app/
+│   │   ├── main.py
+│   │   └── routes/
+│   └── requirements.txt
+├── frontend/            # React frontend
+│   ├── src/
+│   │   ├── components/
+│   │   └── App.js
+│   └── package.json
+├── prompts/             # Prompt templates
+└── README.md
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Setup Instructions
 
-### `npm run eject`
+### 1. Clone the Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/your-username/probe.git
+cd probe
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Backend Setup (FastAPI)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> The FastAPI server runs at `http://127.0.0.1:8000`
 
-## Learn More
+### 3. Frontend Setup (React)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd frontend
+npm install
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> The frontend runs at `http://localhost:3000`
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔄 API Integration Notes
 
-### Analyzing the Bundle Size
+- Ensure the backend is running and accessible to the frontend.
+- If using an external LLM API (e.g., OpenAI), store the API key securely (e.g., in environment variables).
+- Modify prompt handling logic inside `prompts/` or API routes to adjust LLM behavior.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📌 Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [ ] Add authentication system  
+- [ ] Save user query history  
+- [ ] Implement advanced filtering for search results  
+- [ ] Add feedback & rating system for answer quality  
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📄 License
 
-### Deployment
+This project is open-source and available under the **MIT License**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🤝 Contributions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions, issues, and feature requests are welcome!  
+Feel free to fork the repository and open a pull request.
+
+---
+
+## 🧪 Testing
+
+You can test API endpoints using:
+
+- Postman  
+- cURL  
+- Built-in React UI with input/output testing  
+
+---
+
+## 📬 Contact
+
+For questions or suggestions, please open an issue on GitHub.
+
+<img width="1624" alt="Screenshot" src="https://github.com/user-attachments/assets/3fbf2dc9-6006-45af-9764-094d839f7979" />
+
+
+
